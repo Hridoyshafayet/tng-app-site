@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tŝilhqot'in Radio App</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E65100;
+            --bg: #f8f5f2;
+            --text-main: #2b2b2b;
+            --text-muted: #666;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 1rem 3rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(230, 81, 0, 0.2);
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .hero {
+            max-width: 900px;
+            margin: -2rem auto 3rem;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: var(--text-main);
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Store Buttons */
+        .store-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .store-btn {
+            display: inline-block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .store-btn img {
+            height: 50px;
+            border-radius: 8px;
+        }
+
+        .store-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        /* Screenshot Gallery */
+        .gallery-container {
+            margin: 4rem 0;
+            overflow: hidden;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-main);
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem 2rem 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            /* Hide scrollbar for a cleaner look */
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            display: none; 
+        }
+
+        .screenshot {
+            flex: 0 0 auto;
+            width: 260px;
+            border-radius: 24px;
+            scroll-snap-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            border: 6px solid white;
+            background: white;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+
+        /* Footer Links */
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin: 4rem 0 2rem;
+        }
+
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .card { padding: 2rem 1.5rem; }
+            .screenshot { width: 220px; border-width: 4px; }
+            .store-buttons { gap: 1rem; }
+            .store-btn img { height: 44px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imgs/logo.png" alt="Tŝilhqot'in Radio Logo" class="logo">
+        <h1>Tŝilhqot'in Radio</h1>
+        <p>Your Direct Connection to 104.5 FM</p>
+    </header>
+
+    <div class="hero">
+        <div class="card">
+            <h2>Listen anytime, anywhere.</h2>
+            <p>Connect directly to the heart of the Tŝilhqot'in Nation. Stream live radio, explore rich community podcasts on demand, and never miss a live broadcast.</p>
+            
+            <div class="store-buttons">
+                <!-- Apple App Store Link -->
+                <a href="https://apps.apple.com/app/tsilhqotin-radio/id6759801807" target="_blank" class="store-btn">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+                
+                <!-- Google Play Store Link -->
+                <a href="https://play.google.com/store/apps/details?id=ca.tsilhqotin.tngRadio" target="_blank" class="store-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-container">
+        <h3 class="gallery-title">Inside the App</h3>
+        <div class="gallery-scroll">
+            <img src="imgs/home_page.png" alt="Home Screen" class="screenshot">
+            <img src="imgs/live_radio.png" alt="Live Radio Player" class="screenshot">
+            <img src="imgs/podcast_page.png" alt="Podcasts List" class="screenshot">
+            <img src="imgs/episode_page.png" alt="Podcast Episode Detail" class="screenshot">
+            <img src="imgs/schedule_page.png" alt="Weekly Schedule" class="screenshot">
+            <img src="imgs/about_page.png" alt="About the Station" class="screenshot">
+            <img src="imgs/contact_page.png" alt="Contact Us" class="screenshot">
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">App Support</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tŝilhqot'in National Government. All rights reserved.</p>
+    </footer>
+</body>
+</html>
